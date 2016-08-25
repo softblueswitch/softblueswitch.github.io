@@ -17,6 +17,11 @@
 		font: inherit;
 		vertical-align: baseline;
 	}
+p2
+{
+    font-size: 3em;
+    line-height: 2em;
+}
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
