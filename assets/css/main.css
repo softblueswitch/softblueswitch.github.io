@@ -17,10 +17,28 @@
 		font: inherit;
 		vertical-align: baseline;
 	}
+
+h7
+{
+    font-size: 3em;
+    line-height:2em;
+    font-weight: 600
+}
 p2
 {
     font-size: 3em;
-    line-height: 2em;
+    line-height:2em;
+}
+
+p3
+{
+    font-size: 2em;
+    line-height: 1.5em;
+}
+p9
+{
+    font-size: 1em;
+    line-height: 1em;
 }
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
