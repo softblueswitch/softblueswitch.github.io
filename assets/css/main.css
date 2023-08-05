@@ -1721,7 +1721,9 @@ p9
 
 	em, i {
 		
-        font-weight: 550;
+        font-weight: 50;
+        font-size: 1.0em;
+        color: #626262
         
 	}
 
