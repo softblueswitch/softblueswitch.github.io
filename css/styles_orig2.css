@@ -11413,3 +11413,20 @@ section#contact form#contactForm :-ms-input-placeholder {
 .aboutme-image {
   padding-bottom: 57px;
 }
+
+/* Force portfolio grid to stay centered on small screens */
+#portfolio .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center !important;  /* Keep content centered horizontally */
+  align-items: start;
+}
+
+#portfolio .portfolio-item {
+  flex: 0 1 300px;                      /* Adjust width as needed for your cards */
+  margin: 10px;
+}
+
+* {
+  outline: 1px solid rgba(255, 0, 0, 0.1);
+}
