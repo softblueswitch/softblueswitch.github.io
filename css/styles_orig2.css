@@ -11456,6 +11456,11 @@ section#contact form#contactForm :-ms-input-placeholder {
   transform: scale(0.98); /* tiny downscale to prevent rounding overflows */
   transform-origin: center;
 }
+@media (max-width: 480px) {
+  .section-heading {
+    transform: scale(0.95);
+  }
+}
 
 
 
