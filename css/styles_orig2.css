@@ -11435,13 +11435,14 @@ section#contact form#contactForm :-ms-input-placeholder {
   margin: 10px;
 }
 
-/* Force the heading to stay perfectly centred and fit inside viewport */
 .section-heading-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  overflow: hidden; /* stops Safari clipping overflow pixels */
+  width: 100vw;              /* use full viewport width */
+  padding: 0 4vw;            /* internal buffer on each side */
+  box-sizing: border-box;    /* include padding in width */
+  overflow: hidden;          /* hide any overflow just in case */
 }
 
 .section-heading {
@@ -11449,16 +11450,16 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-weight: 700;
   letter-spacing: 0.05em;
   white-space: nowrap;
-  font-size: clamp(1.2rem, 6vw + 0.5rem, 2.5rem);
-  text-align: center;
   margin: 0;
-  padding: 0;
-  transform: scale(0.98); /* tiny downscale to prevent rounding overflows */
-  transform-origin: center;
+  text-align: center;
+  font-size: calc(6vw + 0.5rem); /* scales naturally with screen width */
+  max-width: 100%;               /* never exceed wrapper width */
 }
+
 @media (max-width: 480px) {
   .section-heading {
-    transform: scale(0.95);
+    font-size: calc(7vw + 0.3rem);
+    letter-spacing: 0.04em;
   }
 }
 
