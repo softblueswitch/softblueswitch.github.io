@@ -11050,7 +11050,7 @@ p {
 }
 header.masthead {
   padding-top: 0.2rem;
-  padding-bottom: 5rem;
+  padding-bottom: 4rem;
   text-align: left;
   color: #0de2ff;
   background-color: #6c757d;
@@ -11074,7 +11074,7 @@ header.masthead .masthead-heading {
 @media (min-width: 768px) {
   header.masthead {
     padding-top: 1rem;
-    padding-bottom: 0.2rem;
+    padding-bottom: 1.2rem;
   }
   header.masthead .masthead-subheading {
     font-size: 8.52rem;
@@ -11456,7 +11456,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   white-space: nowrap;
   margin: 0;
   font-size: clamp(1.4rem, 5vw + 0.5rem, 2.5rem); /* scales fluidly */
-  line-height: 1.1;
+  line-height: 1.2;
   max-width: 100%;
 }
 
