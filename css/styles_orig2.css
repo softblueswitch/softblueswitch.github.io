@@ -11472,13 +11472,20 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 
-@media (max-width: 480px) {
+/* Make section headings fit comfortably on mobile screens */
+@media (max-width: 768px) {
   .section-heading {
-    font-size: calc(7vw + 0.3rem);
-    letter-spacing: 0.04em;
+    font-size: 1.8rem;      /* slightly smaller for tablets and phones */
+    letter-spacing: 0.04em; /* tighten tracking for uppercase text */
   }
 }
 
+@media (max-width: 480px) {
+  .section-heading {
+    font-size: 1.5rem;      /* smaller again for iPhones and small devices */
+    letter-spacing: 0.03em;
+  }
+}
 
 
 
