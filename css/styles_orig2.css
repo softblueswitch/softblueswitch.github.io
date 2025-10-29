@@ -11435,19 +11435,28 @@ section#contact form#contactForm :-ms-input-placeholder {
   margin: 10px;
 }
 
-/* Mobile-friendly heading scaling */
+/* Force the heading to stay perfectly centred and fit inside viewport */
+.section-heading-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden; /* stops Safari clipping overflow pixels */
+}
+
 .section-heading {
-  display: block;
-  text-align: center;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.05em;
-  margin: 0 auto;
-  max-width: 85vw;              /* Keeps text inside the viewport */
-  font-size: clamp(1.2rem, 6vw + 0.5rem, 2.5rem);
-  overflow-wrap: normal;
   white-space: nowrap;
+  font-size: clamp(1.2rem, 6vw + 0.5rem, 2.5rem);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  transform: scale(0.98); /* tiny downscale to prevent rounding overflows */
+  transform-origin: center;
 }
+
 
 
 
