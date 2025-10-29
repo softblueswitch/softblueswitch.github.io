@@ -11428,12 +11428,13 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 .section-heading {
+  display: inline-block;
+  max-width: 100%;
   text-align: center;
-  white-space: nowrap;            /* Prevents “PORTFOLIO” from splitting */
-  overflow: hidden;               /* Ensures no overflow on tiny screens */
-  text-overflow: ellipsis;        /* Optional: adds “…” if it gets truncated */
-  font-size: clamp(1.5rem, 4vw + 1rem, 2.5rem);
+  white-space: nowrap;
+  font-size: clamp(1.3rem, 5vw + 0.5rem, 2.5rem);
   letter-spacing: 0.05em;
 }
+
 
 
