@@ -11482,7 +11482,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 @media (max-width: 480px) {
   .section-heading {
-    font-size: 1.5rem;      /* smaller again for iPhones and small devices */
+    font-size: 0.4rem;      /* smaller again for iPhones and small devices */
     letter-spacing: 0.03em;
   }
 }
