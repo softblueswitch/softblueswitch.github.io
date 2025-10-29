@@ -11435,26 +11435,42 @@ section#contact form#contactForm :-ms-input-placeholder {
   margin: 10px;
 }
 
+/* --- Section Heading Wrapper --- */
 .section-heading-wrapper {
   display: flex;
+  flex-direction: column;     /* stack heading and subheading vertically */
+  align-items: center;        /* center both horizontally */
   justify-content: center;
-  align-items: center;
-  width: 100vw;              /* use full viewport width */
-  padding: 0 4vw;            /* internal buffer on each side */
-  box-sizing: border-box;    /* include padding in width */
-  overflow: hidden;          /* hide any overflow just in case */
+  width: 100%;
+  padding: 0 5vw;             /* horizontal padding to prevent clipping */
+  box-sizing: border-box;
+  overflow: hidden;           /* hides tiny Safari overflows */
+  text-align: center;
 }
 
+/* --- Main Heading --- */
 .section-heading {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.05em;
   white-space: nowrap;
   margin: 0;
-  text-align: center;
-  font-size: calc(6vw + 0.5rem); /* scales naturally with screen width */
-  max-width: 100%;               /* never exceed wrapper width */
+  font-size: clamp(1.4rem, 5vw + 0.5rem, 2.5rem); /* scales fluidly */
+  line-height: 1.1;
+  max-width: 100%;
 }
+
+/* --- Subheading --- */
+.section-subheading {
+  font-style: italic;
+  color: #6c757d;             /* Bootstrap muted colour */
+  margin-top: 0.5rem;
+  font-size: clamp(0.9rem, 2vw + 0.5rem, 1.2rem);
+  max-width: 90%;
+  line-height: 1.4;
+  text-align: center;
+}
+
 
 @media (max-width: 480px) {
   .section-heading {
