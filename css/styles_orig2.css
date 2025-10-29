@@ -11475,7 +11475,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 /* Make section headings fit comfortably on mobile screens */
 @media (max-width: 768px) {
   .section-heading {
-    font-size: 1.8rem;      /* slightly smaller for tablets and phones */
+    font-size: 0.9rem;      /* slightly smaller for tablets and phones */
     letter-spacing: 0.04em; /* tighten tracking for uppercase text */
   }
 }
