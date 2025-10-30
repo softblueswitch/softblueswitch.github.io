@@ -11099,7 +11099,7 @@ header.masthead .masthead-heading {
 /* Small screens (mobile phones) */
 @media (max-width: 480px) {
   header.masthead {
-    padding-top: 10.5rem; /* increase slightly for taller nav */
+    padding-top: 7rem; /* increase slightly for taller nav */
   }
 }
 
