@@ -11071,12 +11071,6 @@ header.masthead .masthead-heading {
     padding-top: 9rem;
     padding-bottom: 1.2rem;
     
-    /* Small screens (mobile phones) */
-@media (max-width: 480px) {
-  header.masthead {
-    padding-top: 10.5rem; /* increase slightly for taller nav */
-  }
-}
     
   }
   header.masthead .masthead-subheading {
@@ -11093,6 +11087,22 @@ header.masthead .masthead-heading {
     margin-bottom: 4rem;
   }
 }
+
+
+/* Medium screens (tablets, small laptops) */
+@media (max-width: 768px) {
+  header.masthead {
+    padding-top: 9rem;
+  }
+}
+
+/* Small screens (mobile phones) */
+@media (max-width: 480px) {
+  header.masthead {
+    padding-top: 10.5rem; /* increase slightly for taller nav */
+  }
+}
+
 #portfolio .portfolio-item {
   max-width: 26rem;
   margin-left: auto;
