@@ -11051,7 +11051,7 @@ p {
 header.masthead {
   padding-top: 8rem;
   padding-bottom: 5rem;
-  text-align: left;
+  text-align: center;
   color: #0de2ff;
   background-color: #ffffff;
  
@@ -11079,6 +11079,7 @@ header.masthead .masthead-heading {
     margin-bottom: 2rem;
     margin-top: 4rem;
     margin-right: 0.1rem;
+    text-align: center;
   }
   header.masthead .masthead-heading {
     font-size: 4.5rem;
