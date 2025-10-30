@@ -11097,8 +11097,11 @@ header.masthead .masthead-heading {
      font-family: "Montserrat";
     padding-top: 9rem;
   }
+  
+  header.masthead .masthead-subheading {
+    font-family: "Montserrat";
 }
-
+}
 /* Small screens (mobile phones) */
 @media (max-width: 480px) {
   header.masthead {
