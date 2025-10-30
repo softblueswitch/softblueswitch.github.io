@@ -11049,7 +11049,7 @@ p {
   }
 }
 header.masthead {
-  padding-top: 0.4rem;
+  padding-top: 8rem;
   padding-bottom: 5rem;
   text-align: left;
   color: #0de2ff;
@@ -11068,8 +11068,16 @@ header.masthead .masthead-heading {
 
 @media (min-width: 768px) {
   header.masthead {
-    padding-top: 4rem;
+    padding-top: 9rem;
     padding-bottom: 1.2rem;
+    
+    /* Small screens (mobile phones) */
+@media (max-width: 480px) {
+  header.masthead {
+    padding-top: 10.5rem; /* increase slightly for taller nav */
+  }
+}
+    
   }
   header.masthead .masthead-subheading {
     font-size: 2.28rem;
