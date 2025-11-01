@@ -11567,6 +11567,36 @@ section#contact form#contactForm :-ms-input-placeholder {
   text-align: center;
 }
 
+/* === Strong responsive rules for modal images === */
+.portfolio-modal .modal-body img,
+.modal .modal-body img,
+.modal img {
+  width: 100% !important;        /* scale to available width */
+  max-width: 100% !important;    /* never exceed container width */
+  height: auto !important;       /* important — let height follow width */
+  max-height: 70vh !important;   /* limit by viewport height (so it never fills screen) */
+  object-fit: contain !important;/* show whole image without cropping on mobile */
+  display: block !important;
+  margin: 0.5rem auto !important;
+  box-sizing: border-box !important;
+  transition: none !important;   /* avoid transitional artifacts while debugging */
+}
+
+/* Extra clamp for very small phones */
+@media (max-width: 420px) {
+  .portfolio-modal .modal-body img,
+  .modal .modal-body img {
+    max-height: 65vh !important;
+  }
+}
+
+/* Constrain modal dialog width too (safety net) */
+.portfolio-modal .modal-dialog,
+.modal-dialog {
+  max-width: 95vw !important;
+  margin: 0.5rem auto !important;
+  box-sizing: border-box;
+}
 
 
 
