@@ -7924,7 +7924,7 @@ textarea.form-control-lg {
 }
 
 .fs-4 {
-  font-size: calc(1.275rem + 0.3vw) !important;
+  font-size: calc(1.1rem + 0.3vw) !important;
 }
 
 .fs-5 {
@@ -10790,7 +10790,8 @@ textarea.form-control-lg {
     font-size: 1.75rem !important;
   }
   .fs-4 {
-    font-size: 1.5rem !important;
+      font-size: calc(1.1rem + 0.3vw)!important;
+
   }
 }
 @media print {

@@ -7770,8 +7770,8 @@ textarea.form-control-lg {
 }
 
 .mb-5 {
-  margin-bottom: 3rem !important;
-  line-height: 1.5rem;
+  margin-bottom: 8rem !important;
+  line-height: 1.9rem;
 }
 
 .mb-auto {
@@ -8029,8 +8029,9 @@ textarea.form-control-lg {
 }
 
 .fs-4 {
-  font-size: calc(1.275rem + 0.3vw) !important;
+  font-size: calc(0.7rem + 0.2vw) !important;
 }
+
 
 .fs-5 {
   font-size: 1.25rem !important;
@@ -10895,7 +10896,8 @@ textarea.form-control-lg {
     font-size: 1.75rem !important;
   }
   .fs-4 {
-    font-size: 1.5rem !important;
+      font-size: calc(0.9rem + 0.3vw)!important;
+
   }
 }
 @media print {
@@ -11203,9 +11205,9 @@ header.masthead .masthead-heading {
   
   margin-bottom: 4rem;
   margin-top: 1.0rem;
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: 300;
-  line-height: 1.2rem;
+  line-height: 1.7rem;
   font-family: "Montserrat", "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 .portfolio-modal .modal-content p {
