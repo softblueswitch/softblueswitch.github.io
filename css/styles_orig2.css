@@ -11211,6 +11211,8 @@ header.masthead .masthead-heading {
   display: block;
   margin: 0 auto;
   border-radius: 6px;
+  transition: transform 0.3s ease, max-width 0.3s ease;
+
 }
 
 /* Tighter control for small screens */
