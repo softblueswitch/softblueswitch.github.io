@@ -11215,12 +11215,12 @@ header.masthead .masthead-heading {
 
 }
 
-/* Tighter control for small screens */
+/* Medium screens (tablets and smaller laptops) */
 @media (max-width: 768px) {
   .modal-body img {
-    max-width: 100%;
-    height: auto;
-    max-height: 60vh;
+    height: auto;       /* allow proportional scaling */
+    max-height: 60vh;   /* never exceed 60% of viewport height */
+    object-fit: contain;
   }
 }
 
@@ -11232,7 +11232,6 @@ header.masthead .masthead-heading {
     object-fit: contain;
   }
 }
-
 .portfolio-modal .modal-dialog {
   margin: 1rem auto;
   max-width: 90vw;
