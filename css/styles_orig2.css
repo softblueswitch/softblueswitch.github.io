@@ -10900,6 +10900,21 @@ textarea.form-control-lg {
 
   }
 }
+
+/* Medium screens (tablets and small laptops) */
+@media (max-width: 768px) {
+  .fs-4 {
+    line-height: 1.4; /* tighten slightly */
+  }
+} 
+
+/* Small screens (phones) */
+@media (max-width: 480px) {
+  .fs-4 {
+    line-height: 1.3; /* a touch tighter for narrow screens */
+  }
+}
+
 @media print {
   .d-print-inline {
     display: inline !important;
