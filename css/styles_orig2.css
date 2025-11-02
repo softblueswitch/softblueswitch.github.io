@@ -11575,7 +11575,6 @@ section#contact form#contactForm :-ms-input-placeholder {
   max-width: 100% !important;    /* never exceed container width */
   height: auto !important;       /* important — let height follow width */
   max-height: 70vh !important;   /* limit by viewport height (so it never fills screen) */
-  object-fit: contain !important;/* show whole image without cropping on mobile */
   display: block !important;
   margin: 0.5rem auto !important;
   box-sizing: border-box !important;
@@ -11586,7 +11585,8 @@ section#contact form#contactForm :-ms-input-placeholder {
 @media (max-width: 420px) {
   .portfolio-modal .modal-body img,
   .modal .modal-body img {
-    max-height: 65vh !important;
+    max-height: 67vh !important;
+    width: 100% !important; 
   }
 }
 
