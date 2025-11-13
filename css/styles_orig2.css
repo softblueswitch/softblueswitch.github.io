@@ -25,27 +25,7 @@
   margin-bottom: 0.5rem !important;
 }
 
-@media (max-width: 768px) {
-  .portfolio-item {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    text-align: center;
-  }
-}
 
-@media (max-width: 480px) {
-  .section-heading {
-    font-size: clamp(1rem, 8vw + 0.3rem, 1.8rem);
-    letter-spacing: 0.04em;
-  }
-}
-
-
-.container {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
 
 
 .image-container {
@@ -152,10 +132,10 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-font-sans-serif: Dongle, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: Dongle, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --bs-body-font-family:"Montserrat", Roboto Slab, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --bs-body-font-family: Dongle, Roboto Slab, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
@@ -213,7 +193,7 @@ hr {
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Dongle,"Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   line-height: 1.2;
 }
@@ -7770,8 +7750,8 @@ textarea.form-control-lg {
 }
 
 .mb-5 {
-  margin-bottom: 8rem !important;
-  line-height: 1.9rem;
+  margin-bottom: 3rem !important;
+  line-height: 1.5rem;
 }
 
 .mb-auto {
@@ -8029,9 +8009,8 @@ textarea.form-control-lg {
 }
 
 .fs-4 {
-  font-size: calc(0.7rem + 0.2vw) !important;
+  font-size: calc(1.275rem + 0.3vw) !important;
 }
-
 
 .fs-5 {
   font-size: 1.25rem !important;
@@ -10896,25 +10875,9 @@ textarea.form-control-lg {
     font-size: 1.75rem !important;
   }
   .fs-4 {
-      font-size: calc(0.9rem + 0.3vw)!important;
-
+    font-size: 1.5rem !important;
   }
 }
-
-/* Medium screens (tablets and small laptops) */
-@media (max-width: 768px) {
-  .fs-4 {
-    line-height: 1.4; /* tighten slightly */
-  }
-} 
-
-/* Small screens (phones) */
-@media (max-width: 480px) {
-  .fs-4 {
-    line-height: 1.9; /* a touch tighter for narrow screens */
-  }
-}
-
 @media print {
   .d-print-inline {
     display: inline !important;
@@ -10961,19 +10924,18 @@ p {
 
 .page-section {
   padding: 2rem 0;
- 
 }
 .page-section h2.section-heading, .page-section .section-heading.h2 {
   font-size: 5.1rem;
   margin-top: 0;
   margin-bottom: 1rem;
-  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Dongle,"Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 .page-section h3.section-subheading, .page-section .section-subheading.h3 {
   font-size: 1rem;
-  font-weight: 495;
-  
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 400;
+  font-style: italic;
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   margin-bottom: 4rem;
 }
 
@@ -11002,7 +10964,7 @@ p {
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background-color: #0de2ff;
+  background-color: #212529;
 }
 #mainNav .navbar-toggler {
   padding: 0.75rem;
@@ -11028,7 +10990,7 @@ p {
   letter-spacing: 0.0625em;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #fff;
+  color: #ffc800;
 }
 
 @media (min-width: 992px) {
@@ -11036,7 +10998,7 @@ p {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     border: none;
-    background-color: 0de2ff;
+    background-color: transparent;
     transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
   }
   #mainNav .navbar-brand {
@@ -11050,7 +11012,7 @@ p {
   #mainNav.navbar-shrink {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: #0de2ff;
+    background-color: #212529;
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
@@ -11067,38 +11029,39 @@ p {
   }
 }
 header.masthead {
-  padding-top: 8rem;
-  padding-bottom: 5rem;
-  text-align: center;
-  color: #021517;
+  padding-top: 10.5rem;
+  padding-bottom: 6rem;
+  text-align: left;
+  color: #045e6a;
   background-color: #ffffff;
  
 }
-
-header.masthead .masthead-heading {
-  font-size: 2.5rem; /* smaller, better for mobile */
-  font-weight: 700;
-  line-height: 2;  /* relative, readable spacing */
-  margin-bottom: 1rem;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+header.masthead .masthead-subheading {
+ font-size: 3rem;
+  line-height: 3.1rem;
+  margin-bottom: 25px;
+  text-align: center;
+  font-family: "Dongle","Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-
+header.masthead .masthead-heading {
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 3.25rem;
+  margin-bottom: 2rem;
+  font-family: "Dongle" "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
 
 @media (min-width: 768px) {
   header.masthead {
-    padding-top: 9rem;
-    padding-bottom: 1.2rem;
-    
-    
+    padding-top: 6rem;
+    padding-bottom: 12.5rem;
   }
   header.masthead .masthead-subheading {
-    font-family: "Montserrat";
-    font-size: 1.26rem;
-    line-height: 2.31rem;
-    margin-bottom: 2rem;
-    margin-top: 4rem;
-    margin-right: 0.1rem;
-    text-align: center;
+    font-size: 1.82rem;
+    
+    line-height: 1.41rem;
+    margin-bottom: -11rem;
+    margin-right: 0rem;
   }
   header.masthead .masthead-heading {
     font-size: 4.5rem;
@@ -11107,31 +11070,6 @@ header.masthead .masthead-heading {
     margin-bottom: 4rem;
   }
 }
-
-
-/* Medium screens (tablets, small laptops) */
-@media (max-width: 768px) {
-  header.masthead {
-     font-family: "Montserrat";
-    padding-top: 9rem;
-  }
-  
-  header.masthead .masthead-subheading {
-    font-family: "Montserrat";
-}
-}
-/* Small screens (mobile phones) */
-@media (max-width: 480px) {
-  header.masthead {
-     font-family: "Montserrat";
-    padding-top: 6rem; /* increase slightly for taller nav */
-  }
-  
-   header.masthead .masthead-subheading {
-    font-family: "Montserrat";
-}
-}
-
 #portfolio .portfolio-item {
   max-width: 26rem;
   margin-left: auto;
@@ -11166,75 +11104,23 @@ header.masthead .masthead-heading {
   background-color: #fff;
 }
 #portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
-  font-size: 1.3rem;
-  line-height: 2.1rem;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 368;
+  font-size: 2.3rem;
+  line-height: 1.5rem;
+  font-family: Dongle, "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
   margin-bottom: 1rem;
 
 }
 #portfolio .portfolio-item .portfolio-caption .portfolio-caption-subheading {
-  font-size: 1.1rem;
-  line-height: 2rem;
-  text-align: center;
-  white-space: normal;        /* allows wrapping */
-  word-wrap: break-word;      /* ensures long words wrap */
-  overflow-wrap: break-word;  /* modern fallback */
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-
+  font-style: italic;
+  font-size: 1.5rem;
+  line-height: 1rem;
+  font-family: Dongle, "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-/* Tweak for tablets and smaller devices */
-@media (max-width: 768px) {
-  .portfolio-caption-heading {
-    font-size: 1.5rem;
-    line-height: 1.3;
-    padding: 0 1rem;          /* keep text from hugging edges */
-  }
-}
-
-/* Extra adjustment for small phones */
-@media (max-width: 480px) {
-  .portfolio-caption-heading {
-    font-size: 1.25rem;
-    line-height: 1.4;
-    padding: 0 1.25rem;
-  }
-}
-
-
-/* Keep modal images responsive and contained on mobile */
-.modal-body img {
-  width: 100%;
-  height: auto;
-  max-width: 800px; /* or whatever your design width is */
-  display: block;
-  margin: 0 auto;
-  border-radius: 6px;
-  transition: transform 0.3s ease, max-width 0.3s ease;
-
-}
-
-/* Medium screens (tablets and smaller laptops) */
-@media (max-width: 768px) {
-  .modal-body img {
-    height: auto;       /* allow proportional scaling */
-    max-height: 60vh;   /* never exceed 60% of viewport height */
-    object-fit: contain;
-  }
-}
-
-/* Small screens (phones) */
-@media (max-width: 480px) {
-  .modal-body img {
-    height: auto;
-    max-height: 70vh;   /* a little taller for phones */
-    object-fit: contain;
-  }
-}
 .portfolio-modal .modal-dialog {
-  margin: 1rem auto;
-  max-width: 90vw;
+  margin: 1rem;
+  max-width: 100vw;
 }
 .portfolio-modal .modal-content {
   padding-top: 6rem;
@@ -11249,10 +11135,10 @@ header.masthead .masthead-heading {
   
   margin-bottom: 4rem;
   margin-top: 1.0rem;
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: 300;
-  line-height: 1.7rem;
-  font-family: "Montserrat", "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  line-height: 1.2rem;
+  font-family: Dongle "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 .portfolio-modal .modal-content p {
   margin-bottom: 2rem;
@@ -11515,90 +11401,6 @@ section#contact form#contactForm :-ms-input-placeholder {
 .aboutme-image {
   padding-bottom: 57px;
 }
-
-/* Force portfolio grid to stay centered on small screens */
-#portfolio .row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center !important;  /* Keep content centered horizontally */
-  align-items: start;
-}
-
-#portfolio .portfolio-item {
-  flex: 0 1 300px;                      /* Adjust width as needed for your cards */
-  margin: 10px;
-}
-
-/* --- Section Heading Wrapper --- */
-.section-heading-wrapper {
-  display: flex;
-  flex-direction: column;     /* stack heading and subheading vertically */
-  align-items: center;        /* center both horizontally */
-  justify-content: center;
-  width: 100%;
-  padding: 0 5vw;             /* horizontal padding to prevent clipping */
-  box-sizing: border-box;
-  overflow: hidden;           /* hides tiny Safari overflows */
-  text-align: center;
-}
-
-/* --- Main Heading --- */
-.section-heading {
-  
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  white-space: normal;
-  margin: 0;
-  margin-bottom: 4rem;
-  font-size: clamp(,5vw + 0.5rem, 2.5rem); /* scales fluidly */
-  line-height: 1.2;
-  max-width: 100%;
-}
-
-
-/* --- Subheading --- */
-.section-subheading {
-  
-  color: #6c757d;             /* Bootstrap muted colour */
-  margin-top: 0.5rem;
-  font-size: clamp(0.7rem, 2vw + 0.5rem, 1.2rem);
-  max-width: 90%;
-  line-height: 1.4;
-  text-align: center;
-}
-
-/* === Strong responsive rules for modal images === */
-.portfolio-modal .modal-body img,
-.modal .modal-body img,
-.modal img {
-  width: 100% !important;        /* scale to available width */
-  max-width: 100% !important;    /* never exceed container width */
-  height: auto !important;       /* important — let height follow width */
-  max-height: 70vh !important;   /* limit by viewport height (so it never fills screen) */
-  display: block !important;
-  margin: 0.5rem auto !important;
-  box-sizing: border-box !important;
-  transition: none !important;   /* avoid transitional artifacts while debugging */
-}
-
-/* Extra clamp for very small phones */
-@media (max-width: 420px) {
-  .portfolio-modal .modal-body img,
-  .modal .modal-body img {
-    max-height: 67vh !important;
-    width: 100% !important; 
-  }
-}
-
-/* Constrain modal dialog width too (safety net) */
-.portfolio-modal .modal-dialog,
-.modal-dialog {
-  max-width: 95vw !important;
-  margin: 0.5rem auto !important;
-  box-sizing: border-box;
-}
-
-
 
 
 
