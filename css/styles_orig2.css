@@ -7752,6 +7752,7 @@ textarea.form-control-lg {
 .mb-5 {
   margin-bottom: 3rem !important;
   line-height: 1.5rem;
+  
 }
 
 .mb-auto {
@@ -11028,6 +11029,15 @@ p {
   #mainNav .navbar-nav .nav-item:last-child {
     margin-right: 0;
   }
+  #mainNav {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+   #mainNav.navbar-shrink {
+    padding-top: 1.25rem !important;
+    padding-bottom: 1.25rem !important;
+  }
+
 }
 header.masthead {
   padding-top: 10.5rem;
@@ -11404,7 +11414,4 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 
-#mainNav {
-  background-color: #212529 !important;
-}
 
