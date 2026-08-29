@@ -10,86 +10,6 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-
-/* === Fix modal button spacing === */
-.portfolio-modal .modal-body button[data-bs-dismiss="modal"] {
-  margin-top: 1rem !important;    /* bring button closer to last image */
-  margin-bottom: 0.5rem !important;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Optional: reduce bottom margin on images to tighten layout further */
-.portfolio-modal .modal-body img {
-  margin-bottom: 0.5rem !important;
-}
-
-
-
-
-.image-container {
-  position: relative;
-  overflow: hidden;
-  height: auto;
-  transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  line-height: 0;
-}
-
-.image-container img {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0;
-  border-radius: inherit;
-}
-
-.image-container.cropped {
-  height: 500px;
-  overflow: hidden;
-}
-
-
-.image-container.expanded {
-  height: auto;
-  overflow: visible;
-  border: none;
-}
-
-.image-instruction {
-  display: none !important;
-  line-height: 3rem;
-  text-decoration-color: #fff;
-  opacity: 0;
-}
-
-/* No border version (use this when border doesn’t fit design) */
-.image-container.noborder {
-  border: none !important;
-  transition: none !important;
-  box-shadow: none !important;
-}
-
-
-
-/* optional: a slight hover hint */
-.image-container:hover {
-  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
-}
-
- /* Only apply hover effect when border exists */
-.image-container:not(.noborder):hover {
-  border-color: rgba(0, 0, 0, 0.3);
-}
-
-
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -134,10 +54,10 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: Dongle, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --bs-font-monospace: Dongle, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --bs-body-font-family: Dongle, Roboto Slab, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --bs-body-font-family: Roboto Slab, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
@@ -170,6 +90,27 @@
     scroll-behavior: smooth;
   }
 }
+
+
+/* Floating close button for portfolio modals */
+.modal .btn-close {
+  position: fixed;              /* Keep it in place while scrolling */
+  top: 30px;                    /* Distance from the top of viewport */
+  right: 40px;                  /* Distance from the right of viewport */
+  z-index: 1056;                /* Above modal backdrop (Bootstrap’s z-index hierarchy) */
+  background-color: rgba(255, 255, 255, 0.8); /* Subtle background for contrast */
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: all 0.2s ease;
+}
+
+.modal .btn-close:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+}
+
+
 
 body {
   margin: 0;
@@ -215,7 +156,6 @@ h2, .h2 {
 @media (min-width: 1200px) {
   h2, .h2 {
     font-size: 2rem;
-    
   }
 }
 
@@ -3786,7 +3726,6 @@ textarea.form-control-lg {
 .nav-fill .nav-item {
   flex: 1 1 auto;
   text-align: center;
-  
 }
 
 .nav-justified > .nav-link,
@@ -5445,7 +5384,6 @@ textarea.form-control-lg {
   position: relative;
   flex: 1 1 auto;
   padding: var(--bs-modal-padding);
-  overflow-y: auto;
 }
 
 .modal-footer {
@@ -5604,7 +5542,7 @@ textarea.form-control-lg {
   .modal-fullscreen-xxl-down .modal-footer {
     border-radius: 0;
   }
-  .modal-fullscreen-xxl-down .modal-body.modal-body {
+  .modal-fullscreen-xxl-down .modal-body {
     overflow-y: auto;
   }
 }
@@ -7088,7 +7026,8 @@ textarea.form-control-lg {
 }
 
 .d-block {
-  display: block !important;
+  display: none !important;
+  opacity: 0 !important;
 }
 
 .d-grid {
@@ -7683,9 +7622,7 @@ textarea.form-control-lg {
 }
 
 .mt-2 {
-  margin-top: 0.1rem !important;
-  margin-bottom:-1.1rem!important;
-  font-size:larger;
+  margin-top: 0.5rem !important;
 }
 
 .mt-3 {
@@ -7709,7 +7646,7 @@ textarea.form-control-lg {
 }
 
 .me-1 {
-  margin-right: 0.31rem !important;
+  margin-right: 0.25rem !important;
 }
 
 .me-2 {
@@ -7754,7 +7691,6 @@ textarea.form-control-lg {
 
 .mb-5 {
   margin-bottom: 3rem !important;
-  line-height: 1.5rem;
 }
 
 .mb-auto {
@@ -8002,22 +7938,17 @@ textarea.form-control-lg {
 }
 
 .fs-2 {
-  font-size: calc(1.325rem + 0.9vw) !important;
-  line-height: -0.4rem;
+  font-size: calc(1.925rem + 0.9vw) !important;
+  line-height: 0rem;
   font-family: Dongle !important;
-  
-  
 }
 
 .fs-3 {
   font-size: calc(1.3rem + 0.6vw) !important;
-  
 }
 
 .fs-4 {
-  font-size: calc(1.29rem + 0.3vw) !important;
-  margin-bottom: 2rem;
-   line-height: 1.2rem;
+  font-size: calc(1.34rem + 0.3vw) !important;
 }
 
 .fs-5 {
@@ -8025,7 +7956,10 @@ textarea.form-control-lg {
 }
 
 .fs-6 {
-  font-size: 1rem !important;
+  font-size: 1.5rem !important;
+  font-family: Dongle;
+  line-height: 1.5rem;
+
 }
 
 .fst-italic {
@@ -8184,7 +8118,7 @@ textarea.form-control-lg {
 
 .text-muted {
   --bs-text-opacity: 1;
-  color: black;
+  color: black
 }
 
 .text-black-50 {
@@ -10934,11 +10868,11 @@ p {
   padding: 2rem 0;
 }
 .page-section h2.section-heading, .page-section .section-heading.h2 {
-  font-size: 3rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  line-height: 2rem;
-  font-family: Dongle, "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1rem;
+   font-family: Dongle, "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 .page-section h3.section-subheading, .page-section .section-subheading.h3 {
   font-size: 1rem;
@@ -10999,7 +10933,7 @@ p {
   letter-spacing: 0.0625em;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #ffc800;
+  color: #dc3545;
 }
 
 @media (min-width: 992px) {
@@ -11038,38 +10972,40 @@ p {
   }
 }
 header.masthead {
-  padding-top: 10.5rem;
-  padding-bottom: 6rem;
+  padding-top: 5.8rem;
+  padding-bottom: 3rem;
   text-align: left;
-  color: #045e6a;
-  background-color: #ffffff;
- 
+  color: #6c757d;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
 }
 header.masthead .masthead-subheading {
- font-size: 3rem;
+  font-size: 4rem;
+  font-style: italic;
   line-height: 3.1rem;
-  margin-bottom: 25px;
-  font-family: "Dongle","Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  margin-bottom: 29px;
+  font-family: "Dongle", "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 header.masthead .masthead-heading {
   font-size: 3.25rem;
   font-weight: 700;
   line-height: 3.25rem;
   margin-bottom: 2rem;
-  font-family: "Dongle" "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 @media (min-width: 768px) {
   header.masthead {
-    padding-top: 6rem;
+    padding-top: 17rem;
     padding-bottom: 12.5rem;
   }
   header.masthead .masthead-subheading {
-    font-size: 1.49rem;
-    
-    line-height: 1.41rem;
-    margin-bottom: -11rem;
-    margin-right: 0rem;
+    font-size: 2.25rem;
+    font-style: italic;
+    line-height: 2.25rem;
+    margin-bottom: 2rem;
   }
   header.masthead .masthead-heading {
     font-size: 4.5rem;
@@ -11093,7 +11029,7 @@ header.masthead .masthead-heading {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(255, 200, 0, 0.9);
+  background: rgba(0, 255, 11, 0.9);
   align-items: center;
   justify-content: center;
   opacity: 0;
@@ -11101,28 +11037,27 @@ header.masthead .masthead-heading {
 }
 #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
   font-size: 1.25rem;
-  color: white;
+  color: #dc3545;
 }
 #portfolio .portfolio-item .portfolio-link:hover .portfolio-hover {
   opacity: 1;
 }
 #portfolio .portfolio-item .portfolio-caption {
-  padding: 1.9rem;
+  padding: 1.5rem;
   text-align: center;
   background-color: #fff;
 }
 #portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 2.3rem;
+  line-height: 1.6rem;
   font-family: "Dongle", "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
-  margin-bottom: 1rem;
-
+  margin-bottom: 0rem;
 }
 #portfolio .portfolio-item .portfolio-caption .portfolio-caption-subheading {
   
-  font-size: 1.2rem;
-  line-height: 0.5rem;
+  font-size: 1.6rem;
+  line-height: 1.3rem;
   font-family: Dongle, "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
@@ -11141,11 +11076,12 @@ header.masthead .masthead-heading {
 }
 .portfolio-modal .modal-content p.item-intro {
   
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   margin-top: -1rem;
   font-size: 1.4rem;
   font-weight: 300;
   line-height: 1.2rem;
+ 
   font-family: Dongle, "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 .portfolio-modal .modal-content p {
@@ -11173,10 +11109,18 @@ header.masthead .masthead-heading {
 .timeline {
   position: relative;
   padding: 0;
-  padding-top: 11px;
   list-style: none;
 }
-
+.timeline:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 34px;
+  width: 0px;
+  margin-left: -1.5px;
+  content: "";
+  background-color: #e21a7d;
+}
 .timeline > li {
   position: relative;
   min-height: 50px;
@@ -11193,7 +11137,7 @@ header.masthead .masthead-heading {
   position: relative;
   float: right;
   width: 100%;
-  padding: 0 20px 0 98px;
+  padding: 0 20px 0 100px;
   text-align: left;
 }
 .timeline > li .timeline-panel:before {
@@ -11217,7 +11161,7 @@ header.masthead .masthead-heading {
   margin-left: 0;
   text-align: center;
   color: white;
-  border: 4px solid #e9ecef;
+  border: 7px solid #e9ecef;
   border-radius: 100%;
   background-color: #ffc800;
 }
@@ -11406,9 +11350,13 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-.aboutme-image {
-  padding-bottom: 57px;
+.page-section2 {
+  padding: 1rem 0;
 }
 
-
-
+.portfolio-item.about_image {
+   max-width: 26rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 18rem;
+}
